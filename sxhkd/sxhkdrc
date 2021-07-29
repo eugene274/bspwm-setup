@@ -7,13 +7,14 @@ super + Return
 	/usr/bin/gnome-terminal
 
 # program launcher
-super + @space
-	/usr/bin/ulauncher
+super + space
+	/usr/bin/dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
 
+# lock the screen
 super + alt + l
     /usr/local/bin/xsecurelock
 
