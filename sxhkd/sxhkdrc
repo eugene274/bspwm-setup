@@ -17,6 +17,15 @@ super + Escape
 super + alt + l
     /usr/local/bin/xsecurelock
 
+
+#
+# screenshots
+#
+@Print
+   import -window root ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
+
+shift + @Print
+   import ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
 #
 # bspwm hotkeys
 #
