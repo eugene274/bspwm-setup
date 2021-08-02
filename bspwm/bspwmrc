@@ -21,7 +21,10 @@ if grep 'closed' $LID_STATE_FILE; then
     xrandr --output 'eDP-1' --off
 fi
 
+
 sxhkd &
+
+/usr/bin/compton &
 $XDG_CONFIG_HOME/polybar/launch.sh --hack
 $XDG_CONFIG_HOME/wallpaper/launch.sh &
 
@@ -46,5 +49,5 @@ bspc rule -a 'Telegram Desktop' desktop='^3' state=fullscreen
 pkill -9 kbdd
 /usr/bin/kbdd
 
-
+setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle
 

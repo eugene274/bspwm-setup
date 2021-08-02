@@ -19,8 +19,9 @@ super + alt + l
     /usr/local/bin/xsecurelock
 
 # Change keyboard language
-super + space
-  {setxkbmap us, setxkbmap ru}
+# NOT COMPATIBLE WITH kbdd
+#super + space
+#  {setxkbmap us, setxkbmap ru}
 
 
 

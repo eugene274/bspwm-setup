@@ -12,4 +12,5 @@ sudo dnf install\
     sxhkd\
     feh\
     rofi\
+    compton \
     kbdd
