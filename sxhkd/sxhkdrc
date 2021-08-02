@@ -7,7 +7,7 @@ super + Return
 	/usr/bin/mate-terminal
 
 # program launcher
-super + space
+super + Tab
 	/usr/bin/dmenu_run
 
 # make sxhkd reload its configuration files:
@@ -18,14 +18,19 @@ super + Escape
 super + alt + l
     /usr/local/bin/xsecurelock
 
+# Change keyboard language
+super + space
+  {setxkbmap us, setxkbmap ru}
+
+
 
 #
 # screenshots
 #
-@Print
+Print
    import -window root ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
 
-shift + @Print
+shift + Print
    import ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
 #
 # bspwm hotkeys

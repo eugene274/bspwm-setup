@@ -46,8 +46,5 @@ bspc rule -a 'Telegram Desktop' desktop='^3' state=fullscreen
 pkill -9 kbdd
 /usr/bin/kbdd
 
-setxkbmap -layout ru,us -option grp:ctrl_shift_toggle
-
-###################################################################################
 
 
