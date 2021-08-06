@@ -48,10 +48,10 @@ while true; do
     $CONVERT \
         -pointsize 24 \
         -draw "text $TIMESTAMP_X,$TIMESTAMP_Y '$(timestamp_report)'" -fill white\
-        -pointsize 18 \
-        -draw "text $SENSORS_X,$SENSORS_Y '$(sensors_report)'" -fill white\
-        -draw "text $RAM_X,$RAM_Y '$(ram_report)'" -fill white\
-        -draw "text $DF_X,$DF_Y '$(df_report)'" -fill white\
+#        -pointsize 18 \
+#        -draw "text $SENSORS_X,$SENSORS_Y '$(sensors_report)'" -fill white\
+#        -draw "text $RAM_X,$RAM_Y '$(ram_report)'" -fill white\
+#        -draw "text $DF_X,$DF_Y '$(df_report)'" -fill white\
         base.png temp_wp.png
     $FEH --bg-scale $(pwd)/temp_wp.png
     sleep 10

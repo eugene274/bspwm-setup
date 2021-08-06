@@ -16,7 +16,7 @@ super + Escape
 
 # lock the screen
 super + alt + l
-    /usr/local/bin/xsecurelock
+    xset s activate
 
 # Change keyboard language
 # NOT COMPATIBLE WITH kbdd
@@ -89,8 +89,9 @@ super + {_,shift + }c
 super + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
+# super + Tab is for launcher :(
 # focus the last node/desktop
-super + {grave,Tab}
+super + alt + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history

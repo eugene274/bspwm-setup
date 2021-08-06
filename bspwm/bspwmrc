@@ -24,7 +24,7 @@ fi
 
 sxhkd &
 
-/usr/bin/compton &
+compton --backend glx --paint-on-overlay --mark-ovredir-focused &
 $XDG_CONFIG_HOME/polybar/launch.sh --hack
 $XDG_CONFIG_HOME/wallpaper/launch.sh &
 
@@ -50,4 +50,13 @@ pkill -9 kbdd
 /usr/bin/kbdd
 
 setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle
+
+####################################################################################
+# Lock screen at inactivity
+####################################################################################
+export XSECURELOCK_SWITCH_USER_COMMAND='dm-tool switch-to-greeter'
+
+xset s on
+xset s 120
+/usr/bin/xss-lock -n $XDG_CONFIG_HOME/bspwm/xss-lock-hook.sh -- xsecurelock &
 
