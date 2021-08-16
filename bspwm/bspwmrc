@@ -25,7 +25,7 @@ fi
 sxhkd &
 
 compton --backend glx --paint-on-overlay --mark-ovredir-focused &
-$XDG_CONFIG_HOME/polybar/launch.sh --hack
+$XDG_CONFIG_HOME/polybar/launch.sh --blocks
 $XDG_CONFIG_HOME/wallpaper/launch.sh &
 
 bspc monitor $PRIMARY_DISPLAY -d 1 2 3 4 5 6 7 8 9 0 

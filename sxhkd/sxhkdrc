@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	/usr/bin/mate-terminal
+	/usr/local/bin/st
 
 # program launcher
 super + Tab
-	/usr/bin/dmenu_run
+	/home/eugene/.config/polybar/blocks/scripts/launcher.sh
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -29,10 +29,10 @@ super + alt + l
 # screenshots
 #
 Print
-   import -window root ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
+   /usr/bin/mate-screenshot
 
 shift + Print
-   import ~/Pictures/$(date '+%Y%m%d-%H%M%S').png
+   /usr/bin/mate-screenshot -a
 #
 # bspwm hotkeys
 #
