@@ -49,7 +49,9 @@ bspc rule -a 'Telegram Desktop' desktop='^3' state=fullscreen
 pkill -9 kbdd
 /usr/bin/kbdd
 
-setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle
+# localectl obviously resets xkbmap settings
+#setxkbmap -model pc105 -layout us,ru -variant qwerty -option grp:win_space_toggle
+localectl set-x11-keymap us,ru pc105 qwerty 'grp:win_space_toggle'
 
 ####################################################################################
 # Lock screen at inactivity
@@ -60,3 +62,7 @@ xset s on
 xset s 120
 /usr/bin/xss-lock -n $XDG_CONFIG_HOME/bspwm/xss-lock-hook.sh -- xsecurelock &
 
+####################################################################################
+# Calcurse
+####################################################################################
+/usr/bin/calcurse --daemon &

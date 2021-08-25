@@ -13,4 +13,5 @@ sudo dnf install\
     feh\
     rofi\
     compton \
-    kbdd
+    kbdd \
+    light
