@@ -2,6 +2,8 @@
 
 
 
+/usr/bin/wmname LG3D
+
 ###################################################################################
 # Checking lid state: if closed, set HDMI-1 as primary and initialize bspwm there
 # otherwise initialize in eDP-1
@@ -21,6 +23,8 @@ if grep 'closed' $LID_STATE_FILE; then
     xrandr --output 'eDP-1' --off
 fi
 
+xrandr --output $PRIMARY_DISPLAY -s 1920x1080 --mode 1920x1080
+
 
 sxhkd &
 
@@ -28,10 +32,10 @@ compton --backend glx --paint-on-overlay --mark-ovredir-focused &
 $XDG_CONFIG_HOME/polybar/launch.sh --blocks
 $XDG_CONFIG_HOME/wallpaper/launch.sh &
 
-bspc monitor $PRIMARY_DISPLAY -d 1 2 3 4 5 6 7 8 9 0 
+bspc monitor $PRIMARY_DISPLAY -d I II III IV V VI VII VIII IX X
 
-bspc config border_width         2
-bspc config window_gap          12
+bspc config border_width         1
+bspc config window_gap           3
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -41,7 +45,13 @@ bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a 'Telegram Desktop' desktop='^3' state=fullscreen
+
+bspc rule -a "ROOT" state=floating 
+bspc rule -a "jetbrains-clion" state=floating desktop="^5" follow=on
+bspc rule -a "zoom" state=floating
+bspc rule -a Pavucontrol state=floating
+bspc rule -a pavucontrol state=floating
+bspc rule -a "Firefox:*:Picture-in-Picture" state=floating sticky
 
 ####################################################################################
 # Keyboard layout

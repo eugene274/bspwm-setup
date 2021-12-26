@@ -16,7 +16,7 @@ super + Escape
 
 # lock the screen
 super + alt + l
-    xset s activate
+    loginctl lock-session
 
 # Change keyboard language
 # NOT COMPATIBLE WITH kbdd
@@ -148,3 +148,15 @@ XF86MonBrightnessUp
 
 XF86MonBrightnessDown
    /usr/bin/light -U 10
+
+XF86AudioRaiseVolume
+   /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ +5%
+
+XF86AudioLowerVolume
+   /usr/bin/pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+XF86AudioMute
+   /usr/bin/pactl set-sink-mute @DEFAULT_SINK@ toggle
+
+XF86HomePage
+   /usr/bin/firefox  

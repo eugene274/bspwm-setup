@@ -44,7 +44,7 @@ function df_report() {
     df -h
 }
 
-while true; do
+#while true; do
 #   $CONVERT \
 #       -pointsize 24 \
 #       -draw "text $TIMESTAMP_X,$TIMESTAMP_Y '$(timestamp_report)'" -fill white\
@@ -53,6 +53,6 @@ while true; do
 #        -draw "text $RAM_X,$RAM_Y '$(ram_report)'" -fill white\
 #        -draw "text $DF_X,$DF_Y '$(df_report)'" -fill white\
 #        base.png temp_wp.png
-    $FEH --bg-scale $(pwd)/base.png
-    sleep 10
-done    
+    $FEH --bg-scale $(pwd)/1626183341_16-kartinkin-com-p-panelka-tekstura-krasivo-20.jpg
+#    sleep 10
+#done    
